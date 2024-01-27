@@ -1,0 +1,129 @@
+:root {
+  --main-bg-color: #F9F9FB;
+  --firefox-text-color: #20123A;
+  --secondary-text-color: #4D4D4D;
+}
+
+/* GENERAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  color: var(--firefox-text-color);
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+
+/* HEADER */
+
+header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+}
+
+header ul li {
+  margin-left: 2rem;
+}
+
+header ul li a {
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+/* MAIN */
+
+main {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.browser_identifier {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.browser_identifier figure {
+  width: 7rem;
+  height: 7rem;
+  margin-right: 1rem;
+}
+
+.browser_identifier img {
+  width: 100%;
+  height: 100%;
+}
+
+/* FOOTER */
+
+footer {
+  width: 100%;
+  height: 10vh;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer q {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: var(--secondary-text-color);
+}
+
+footer q::before {
+  content: none;
+}
+
+footer q::after {
+  content: none;
+}
+
+footer ul {
+  display: none;
+  list-style: none;
+}
+
+footer ul li {
+  margin-left: 2rem;
+}
+
+footer ul li a {
+  text-decoration: none;
+  font-size: 1.4rem;
+}
