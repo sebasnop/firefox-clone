@@ -41,16 +41,18 @@ header {
   padding: 1rem 3rem;
 }
 
-header ul {
+.navbar {
   display: flex;
+  align-items: center;
   list-style: none;
 }
 
-header ul li {
+.navbar li {
   margin-left: 2rem;
+  height: 100%;
 }
 
-header ul li a {
+.navbar li a {
   text-decoration: none;
   font-size: 1.6rem;
 }
@@ -126,4 +128,5 @@ footer ul li {
 footer ul li a {
   text-decoration: none;
   font-size: 1.4rem;
+  color: var(--firefox-text-color);
 }
