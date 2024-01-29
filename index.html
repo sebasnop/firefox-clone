@@ -13,28 +13,46 @@
 
   <link rel="icon" href="./assets/firefox_logo.svg">
 
+  <link rel="stylesheet"
+          href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
   <header>
     <nav>
-      <ul class="navbar">
-        <li><a href="https://getpocket.com/es/pocket-and-firefox/" title="Tu librería personal">Pocket</a></li>
-        <li><a href="https://www.mozilla.org/es-ES/products/vpn/" title="Mozilla VPN">VPN</a></li>
-        <li class="profile_picture">
-          <a href="https://accounts.firefox.com/settings" title="Edita tu perfil">
+      <ul class="nav-right">
+        <li class="nav-right__pocket"><a href="https://getpocket.com/es/pocket-and-firefox/" title="Tu librería personal" target="_blank">Pocket</a></li>
+        <li class="nav-right__vpn"><a href="https://www.mozilla.org/es-ES/products/vpn/" title="Mozilla VPN" target="_blank">VPN</a></li>
+        <li class="nav-right__user-profile">
+          <a href="https://accounts.firefox.com/settings" title="Edita tu perfil" target="_blank">
+            <figure class="user-profile__figure">
+              <img class="user-profile__img" src="./assets/user_circle.svg" alt="User profile picture">
+            </figure>
           </a>
         </li>
       </ul>
     </nav>
   </header>
   <main>
-    <div class="browser_identifier">
+    <section class="main-identifier">
       <figure>
         <img src="./assets/firefox_logo.svg" alt="Firefox logo">
       </figure>
       <h1>Firefox</h1>
-    </div>
-    <input type="search" name="" id="" title="Buscar">
+    </section>
+    <section class="main-search">
+      <div class="search__bar">
+        <input class="search__field small" type="search" name="Search" id="search" 
+          title="Buscar con Google o introducir una dirección" 
+          placeholder="Buscar con Google"
+        >
+        <input class="search__field large" type="search" name="Search" id="search" 
+          title="Buscar con Google o introducir una dirección" 
+          placeholder="Buscar con Google o introducir una dirección"
+        >
+      </div>
+    </section>
   </main>
   <footer>
     <q>Internet para la gente.</q>

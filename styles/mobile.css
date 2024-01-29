@@ -2,6 +2,10 @@
   --main-bg-color: #F9F9FB;
   --firefox-text-color: #20123A;
   --secondary-text-color: #4D4D4D;
+  --input-placeholder-text-color: #8F8F91;
+  --profile-image-outline-color-hover: #B3B3B3;
+  --search-field-active-color: #0061e0;
+  --search-field-active-color-dimmed: color-mix(in srgb, var(--search-field-active-color) 25%, transparent);
 }
 
 /* GENERAL */
@@ -38,23 +42,45 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 1rem 3rem;
+  padding: 0 3rem;
 }
 
-.navbar {
+.nav-right {
   display: flex;
   align-items: center;
   list-style: none;
 }
 
-.navbar li {
+.nav-right li {
   margin-left: 2rem;
   height: 100%;
 }
 
-.navbar li a {
-  text-decoration: none;
-  font-size: 1.6rem;
+/* HEADER > Nav > Pocket and VPN options */
+
+.nav-right__pocket,.nav-right__vpn {
+  display: none;
+}
+
+/* HEADER > Nav > User Profile Picture */
+
+.nav-right li:last-child {
+  margin-left: 2.5rem;
+}
+
+.nav-right .user-profile__figure {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.nav-right .user-profile__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.nav-right .user-profile__img:hover {
+  outline: solid var(--profile-image-outline-color-hover) 0.3rem;
 }
 
 /* MAIN */
@@ -73,22 +99,57 @@ main h1 {
   font-weight: 700;
 }
 
-.browser_identifier {
+.main-identifier {
   display: flex;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
-.browser_identifier figure {
+.main-identifier figure {
   width: 7rem;
   height: 7rem;
   margin-right: 1rem;
 }
 
-.browser_identifier img {
+.main-identifier img {
   width: 100%;
   height: 100%;
 }
+
+.search__bar {
+  width: 80vw;
+  max-width: 720px;
+  height: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__field {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 1rem;
+  padding: 0 2rem;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.search__field.large {
+  display: none;
+}
+
+.search__field::placeholder {
+  color: var(--input-placeholder-text-color);
+  font-size: 1.4rem;
+}
+
+.search__field:active,.search__field:focus {
+  border: 1px solid var(--search-field-active-color);
+  outline: 0;
+  box-shadow: 0 0 0 2px var(--search-field-active-color-dimmed);
+}
+
 
 /* FOOTER */
 
@@ -118,15 +179,4 @@ footer q::after {
 
 footer ul {
   display: none;
-  list-style: none;
-}
-
-footer ul li {
-  margin-left: 2rem;
-}
-
-footer ul li a {
-  text-decoration: none;
-  font-size: 1.4rem;
-  color: var(--firefox-text-color);
 }

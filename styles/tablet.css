@@ -1,3 +1,58 @@
+:root {
+  --main-bg-color: #F9F9FB;
+  --firefox-text-color: #20123A;
+  --firefox-text-color-secondary: #342b47;
+  --firefox-text-color-hover: #431599;
+  --secondary-text-color: #4D4D4D;
+}
+
+/* HEADER */
+
+.nav-right__pocket,.nav-right__vpn {
+  display: inline;
+}
+
+.nav-right li a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: var(--firefox-text-color-secondary);
+}
+
+.nav-right li a:hover {
+  text-decoration: underline;
+  color: var(--firefox-text-color-hover);
+}
+
+
+/* MAIN */
+
+.search__field.small {
+  display: none;
+}
+
+.search__field.large {
+  display: inline-block;
+}
+
+
+/* FOOTER */
+
 footer ul {
   display: flex;
+  list-style: none;
+}
+
+footer ul li {
+  margin-left: 2rem;
+}
+
+footer ul li a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: var(--secondary-text-color);
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+  color: var(--firefox-text-color);
 }
