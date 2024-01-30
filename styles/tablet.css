@@ -26,11 +26,11 @@
 
 /* MAIN */
 
-.search__field.small {
+.search-bar__input.small {
   display: none;
 }
 
-.search__field.large {
+.search-bar__input.large {
   display: inline-block;
 }
 
